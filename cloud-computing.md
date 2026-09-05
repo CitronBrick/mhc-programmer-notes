@@ -79,3 +79,34 @@
 * Real-time monitoring : Prometheus, Datadog monitor CPU & memory usage
 * Load balancer : Nginx, HAProxy
 * Resource management policies : AWS Autoscaling, Azure AutoScale, Google Cloud Autoscaler 
+
+## IAM = Identity and Access Management
+
+* helps to securely control access to AWS resources
+* by default, *root user* is created. Should NOT be used for day to day tasks
+* Principal : IAM User, AWS STS Federated Principal, IAM role, application
+* **eventually consistent**
+* AWS STS = AWS Security Token Service
+
+### How IAM works
+
+1. When users signs into AWS using credentials, IAM matches credentials to Principal & authenticates
+2. IAM makes a request to grant the Principal access to resources
+3. IAM verifies if identity is in authorized users list.
+4. IAM determines what policies control the level of access granted
+5. IAM evaluates any other policies that may be in effect.
+6. IAM grants/denies
+
+### Request Components
+
+* Actions/Operations
+* Resources
+* Principal
+* Environment data : IP Address, User agent, SSL status & timestamp
+* Resource data
+
+## REST
+
+* REpresentational State Transfer
+* Roy Fielding
+* used to build cloud APIs on HTTP
